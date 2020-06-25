@@ -1,6 +1,15 @@
-const FILES_TO_CACHE = ["/", "/index.html", "app.js", "favicon.ico"];
+const FILES_TO_CACHE = [
+  "/", 
+  "index.html",
+  "styles.css",
+  "./dist/assets/icons/icon_192x192.7bcd6caee51150523b1902b37499b0cd.png",
+  "./dist/assets/icons/icon_512x512.2359d8c5512984950d88b5dd9631999c.png",
+  "./dist/index.bundle.js",
+  "./dist/indexedDb.bundle.js",
+  "./dist/manifest.json"
+];
 
-const CACHE_NAME = "static-cache-v2";
+const CACHE_NAME = "static-cache-v1";
 const DATA_CACHE_NAME = "data-cache-v1";
 
 // install
@@ -53,4 +62,13 @@ self.addEventListener("fetch", function(evt) {
       }).catch(err => console.log(err))
     );
     return;
-}});
+  }
+
+  evt.respondWith(
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.match(evt.request).then(response => {
+        return response || fetch(evt.request);
+      });
+    })
+  );
+});
