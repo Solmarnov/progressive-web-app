@@ -4,8 +4,8 @@ const FILES_TO_CACHE = [
   "styles.css",
   "./dist/assets/icons/icon_192x192.7bcd6caee51150523b1902b37499b0cd.png",
   "./dist/assets/icons/icon_512x512.2359d8c5512984950d88b5dd9631999c.png",
-  "./dist/index.bundle.js",
-  "./dist/indexedDb.bundle.js",
+  "indexedDb.js",
+  "index.js",
   "./dist/manifest.json"
 ];
 
