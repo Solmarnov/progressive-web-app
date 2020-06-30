@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
-    "build": "webpack --watch",
+    "build": "webpack",
     "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "npm run webpack",
