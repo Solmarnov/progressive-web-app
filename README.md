@@ -16,6 +16,7 @@ Go to web app: https://arcane-sierra-96372.herokuapp.com/
    *  Manifest
    *  Client Storage > IndexedDB
    *  Client Cache Storage
+*  Node.JS
 *  MongoDB
    *  Mongoose
 *  Express
